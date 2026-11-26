@@ -813,6 +813,15 @@ footer {
         gap: 10px;
     }
 
+    /* 手機上先把黑塔縮小，避免擋到內容 */
+    .tower-left img.tower-small {
+        width: 54px;
+    }
+
+    .tower-right img.tower-big {
+        display: none;
+    }
+
     .logo-container {
         flex-direction: column;
         text-align: center;
