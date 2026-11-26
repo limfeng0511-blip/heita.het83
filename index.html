@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黑塔帽子代練</title>
+    <title>黑塔帽子代練｜崩壞：星穹鐵道 代打・托管</title>
+    <meta name="description" content="專做《崩壞：星穹鐵道》代打與托管。混沌回憶、異相三騎士、王棋滿星。滿星才付、全程錄影、當天可交。">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,246 +20,383 @@
             <nav>
                 <ul>
                     <li><a href="#home">首頁</a></li>
-                    <li><a href="#services">服務項目</a></li>
-                    <li><a href="#pricing">價格表</a></li>
-                    <li><a href="#contact">聯絡我們</a></li>
+                    <li><a href="#services">服務</a></li>
+                    <li><a href="#pricing">價格</a></li>
+                    <li><a href="#works">作品</a></li>
+                    <li><a href="#faq">常見問題</a></li>
+                    <li><a href="#contact">聯絡</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- ================= 首頁 ================= -->
         <section id="home" class="hero reveal">
             <div class="container">
+                <p class="hero-eyebrow">專做《崩壞：星穹鐵道》</p>
                 <h2>黑塔帽子代練</h2>
-                <p>快速、安全、專業的代練服務，讓您輕鬆享受遊戲樂趣</p>
+                <p class="hero-sub">滿星才付 · 全程錄影 · 當天可交</p>
+
+                <!-- ↓↓↓ 有空接單時，改這一行文字就好 ↓↓↓ -->
+                <div class="status-badge">
+                    <span class="dot"></span>
+                    <span>本週可接單：週一、週二、週四、週六日晚上</span>
+                </div>
+
                 <div class="cta-buttons">
-                    <button class="btn primary" onclick="scrollToSection('services')">查看服務</button>
-                    <button class="btn secondary" onclick="scrollToSection('pricing')">查看價格</button>
+                    <!-- ↓ 換成你的 Threads 個人頁連結（不是貼文連結） -->
+                    <a class="btn primary" href="https://www.threads.com/share/H-gLDb2UE" target="_blank" rel="noopener noreferrer">私訊詢價</a>
+                    <button class="btn secondary" onclick="scrollToSection('pricing')">看價格</button>
+                </div>
+
+                <!-- YouTube 影片區：有影片 ID 會自動變成播放器，沒有就顯示卡位畫面 -->
+                <div class="hero-video" id="hero-video"></div>
+            </div>
+        </section>
+
+        <!-- ================= 信任標章 ================= -->
+        <section class="trust-bar reveal">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <i class="fas fa-star"></i>
+                        <h4>滿星才付</h4>
+                        <p>沒打滿不收費</p>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-video"></i>
+                        <h4>全程錄影</h4>
+                        <p>打完附影片存證</p>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                        <h4>分段付款</h4>
+                        <p>訂金 30%，完成後補尾款</p>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-bolt"></i>
+                        <h4>當天可交</h4>
+                        <p>有空檔就能當天打完</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= 服務 ================= -->
         <section id="services" class="services reveal">
             <div class="container">
                 <h2>服務項目</h2>
-                <p class="coming-soon"></p>
-                
-                <!-- 專區切換 -->
+
                 <div class="game-tabs">
-                    <button class="tab-btn active" onclick="switchGame('honkai')">星穹鐵道</button>
-                    <button class="tab-btn" onclick="switchGame('honkai3rd')">崩壞：因緣精靈</button>
+                    <button class="tab-btn active" data-game="honkai" onclick="switchGame('honkai')">星穹鐵道</button>
+                    <button class="tab-btn" data-game="honkai3rd" onclick="switchGame('honkai3rd')">崩壞：因緣精靈</button>
                 </div>
-                
-                <!-- 星穹鐵道服務 -->
-                <div id="honkai-services" class="game-content active">
+
+                <!-- 星穹鐵道 -->
+                <div class="game-content active" data-game="honkai">
                     <div class="service-grid">
-                        <div class="service-card">
-                            <i class="fas fa-star"></i>
-                            <h3>每日太忙？</h3>
-                            <p>交給我們托管！</p>
-                        </div>
-                        <div class="service-card">
-                            <i class="fas fa-star"></i>
-                            <h3>懶得練角色？</h3>
-                            <p>交給我們 幫你練滿</p>
-                        </div>
                         <div class="service-card">
                             <i class="fas fa-dungeon"></i>
                             <h3>深淵打不過？</h3>
-                            <p>痛苦讓我們凹</p>
+                            <p>混沌回憶、虛構敘事、末日幻影，幫你凹到滿星。</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>沒時間玩？</h3>
+                            <p>每日委託、體力、每週貨幣，交給托管。</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-book-open"></i>
+                            <h3>劇情活動堆著？</h3>
+                            <p>主線、支線、大小活動，一次幫你清完。</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- 崩壞：因緣精靈服務 -->
-                <div id="honkai3rd-services" class="game-content">
-                    <div class="service-grid">
-                        <div class="service-card">
-                            <i class="fas fa-gamepad"></i>
-                            <h3>日常任務</h3>
-                            <p>幫你完成所有日常</p>
-                        </div>
-                        <div class="service-card">
-                            <i class="fas fa-gem"></i>
-                            <h3>角色練級</h3>
-                            <p>快速提升角色等級</p>
-                        </div>
-                        <div class="service-card">
-                            <i class="fas fa-trophy"></i>
-                            <h3>競技場</h3>
-                            <p>衝擊更高排名</p>
+
+                <!-- 崩壞：因緣精靈（卡位） -->
+                <div class="game-content" data-game="honkai3rd">
+                    <div class="coming-soon-card">
+                        <span class="soon-tag">即將推出</span>
+                        <h3>《崩壞：因緣精靈》代練</h3>
+                        <p>
+                            預計 <strong>2027 年春季</strong> 上市，開服後開放代練與托管。<br>
+                            現在先追蹤，開服第一批優先接單、老客戶價。
+                        </p>
+                        <div class="soon-actions">
+                            <a class="btn primary" href="https://www.threads.com/share/H-gLDb2UE" target="_blank" rel="noopener noreferrer">先卡位</a>
+                            <a class="btn secondary" href="https://www.youtube.com/@herta.hat83" target="_blank" rel="noopener noreferrer">訂閱 YouTube</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= 價格 ================= -->
         <section id="pricing" class="pricing reveal">
             <div class="container">
                 <h2>價格表</h2>
-                
-                <!-- 專區切換 -->
+                <p class="pricing-note">全部為新台幣 NT$ ｜ 滿星才付 ｜ 價格已含我的時間，不另收費</p>
+
                 <div class="game-tabs">
-                    <button class="tab-btn active" onclick="switchGame('honkai')">星穹鐵道</button>
-                    <button class="tab-btn" onclick="switchGame('honkai3rd')">崩壞：因緣精靈</button>
+                    <button class="tab-btn active" data-game="honkai" onclick="switchGame('honkai')">星穹鐵道</button>
+                    <button class="tab-btn" data-game="honkai3rd" onclick="switchGame('honkai3rd')">崩壞：因緣精靈</button>
                 </div>
-                
-                <!-- 星穹鐵道價格表 -->
-                <div id="honkai-pricing" class="game-content active">
-                    <div class="price-table">
-                        <div class="price-header">
-                            <div>服務項目</div>
-                            <div>價格（臺幣）</div>
-                            <div>選擇</div>
+
+                <!-- 星穹鐵道價格 -->
+                <div class="game-content active" data-game="honkai">
+
+                    <h3 class="price-group-title"><i class="fas fa-bolt"></i> 單次急單（今天有空就能打）</h3>
+                    <div class="plan-grid">
+                        <div class="plan-card featured">
+                            <span class="plan-tag">最常點</span>
+                            <h4>三路深淵 滿星</h4>
+                            <div class="plan-price">NT$ 350</div>
+                            <p class="plan-meta">約 60–90 分鐘 ｜ 滿星才付</p>
+                            <button class="btn add-to-cart" onclick="addToCart('三路深淵 滿星', 350)">加入詢價清單</button>
                         </div>
-                        <div class="price-row">
-                            <div>托管:每日60石頭+體力</div>
-                            <div>150$一個月</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-托管:每日60石頭+體力', 150)">加入購物車</button>
+                        <div class="plan-card">
+                            <h4>異相三騎士 滿星</h4>
+                            <div class="plan-price">NT$ 250</div>
+                            <p class="plan-meta">約 60–90 分鐘 ｜ 滿星才付</p>
+                            <button class="btn add-to-cart" onclick="addToCart('異相三騎士 滿星', 250)">加入詢價清單</button>
                         </div>
-                        <div class="price-row">
-                            <div>托管:每日+體力+每周貨幣/差分</div>
-                            <div>200$一個月</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-托管:每日+體力+每周貨幣/差分', 200)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>托管:每日+體力+每周貨幣/差分+代練</div>
-                            <div>300$一個月</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-托管:每日+體力+每周貨幣/差分+代練', 300)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>托管:每日+體力+貨幣/差分+代練+深淵（盡量凹）</div>
-                            <div>600$一個月</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-托管:每日+體力+貨幣/差分+代練+深淵（盡量凹）', 600)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>凹一期深淵（滿星才結）</div>
-                            <div>150$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-凹一期深淵（滿星才結）', 150)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>異相三騎士（滿星才結）</div>
-                            <div>200$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-異相三騎士（滿星才結）', 200)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>王棋（滿星才結）</div>
-                            <div>100$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-王棋（滿星才結）', 100)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>打滿貨幣/差分 等級</div>
-                            <div>視情況而定</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-打滿貨幣/差分 等級', 1)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>劇情（支綫主綫全部一版本）</div>
-                            <div>100$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-劇情（支綫主綫全部一版本）', 100)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>小活動</div>
-                            <div>50$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-小活動', 50)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>大活動</div>
-                            <div>100$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-大活動', 100)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>寶箱</div>
-                            <div>一個3$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-寶箱', 3)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>地圖隱藏任務和小支綫</div>
-                            <div>每張地圖+20$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-地圖隱藏任務和小支綫', 20)">加入購物車</button>
-                        </div>
-                        <div class="price-row">
-                            <div>10抽(任何方法)</div>
-                            <div>視情況而定</div>
-                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-10抽(任何方法)', 1)">加入購物車</button>
+                        <div class="plan-card">
+                            <h4>王棋 滿星</h4>
+                            <div class="plan-price">NT$ 150</div>
+                            <p class="plan-meta">約 30–50 分鐘 ｜ 滿星才付</p>
+                            <button class="btn add-to-cart" onclick="addToCart('王棋 滿星', 150)">加入詢價清單</button>
                         </div>
                     </div>
-                </div>
-                
-                #<!-- 崩壞：因緣精靈價格表 -->
-                <div id="honkai3rd-pricing" class="game-content">
+
+                    <h3 class="price-group-title"><i class="fas fa-list-check"></i> 內容代打</h3>
                     <div class="price-table">
                         <div class="price-header">
                             <div>服務項目</div>
-                            <div>價格（臺幣）</div>
+                            <div>價格（NT$）</div>
                             <div>選擇</div>
                         </div>
                         <div class="price-row">
-                            <div>日常任務全清</div>
-                            <div>100$一個月</div>
-                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-日常任務全清', 100)">加入購物車</button>
+                            <div>主線＋支線（一版本全清）</div>
+                            <div>150</div>
+                            <button class="btn add-to-cart" onclick="addToCart('主線＋支線（一版本全清）', 150)">加入詢價清單</button>
                         </div>
                         <div class="price-row">
-                            <div>角色練級（1-90）</div>
-                            <div>150$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-角色練級（1-90）', 150)">加入購物車</button>
+                            <div>大活動 全清</div>
+                            <div>150</div>
+                            <button class="btn add-to-cart" onclick="addToCart('大活動 全清', 150)">加入詢價清單</button>
                         </div>
                         <div class="price-row">
-                            <div>競技場排名</div>
-                            <div>200$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-競技場排名', 200)">加入購物車</button>
+                            <div>小活動 全清</div>
+                            <div>100</div>
+                            <button class="btn add-to-cart" onclick="addToCart('小活動 全清', 100)">加入詢價清單</button>
                         </div>
                         <div class="price-row">
-                            <div>活動關卡全清</div>
-                            <div>150$</div>
-                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-活動關卡全清', 150)">加入購物車</button>
+                            <div>地圖寶箱（每個，一張圖約 30 個）</div>
+                            <div>3 / 個</div>
+                            <div class="qty-cell">
+                                <input class="qty-input" id="chest-qty" type="number" min="1" step="1" value="30" inputmode="numeric" aria-label="寶箱數量">
+                                <button class="btn add-to-cart" onclick="addToCartQty('地圖寶箱（每個）', 3, 'chest-qty')">加入</button>
+                            </div>
                         </div>
                         <div class="price-row">
-                            <div>角色碎片收集</div>
-                            <div>視情況而定</div>
-                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-角色碎片收集', 1)">加入購物車</button>
+                            <div>地圖隱藏任務＋小支線（每張圖）</div>
+                            <div>20</div>
+                            <button class="btn add-to-cart" onclick="addToCart('地圖隱藏任務＋小支線（每張圖）', 20)">加入詢價清單</button>
                         </div>
                         <div class="price-row">
-                            <div>裝備強化</div>
-                            <div>視情況而定</div>
-                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-裝備強化', 1)">加入購物車</button>
+                            <div>代農抽卡資源（每 10 抽份量）</div>
+                            <div>150</div>
+                            <button class="btn add-to-cart" onclick="addToCart('代農抽卡資源（每 10 抽份量）', 150)">加入詢價清單</button>
+                        </div>
+                    </div>
+
+                    <h3 class="price-group-title"><i class="fas fa-calendar-check"></i> 托管（月租・名額 3 位）</h3>
+                    <div class="plan-grid single">
+                        <div class="plan-card anchor">
+                            <h4>全套托管</h4>
+                            <div class="plan-price">NT$ 800 <span>/ 月</span></div>
+                            <ul class="plan-list">
+                                <li>每日委託＋體力</li>
+                                <li>每週貨幣／差分</li>
+                                <li>深淵盡量凹</li>
+                                <li>活動進度不漏</li>
+                                <li>每日回報進度</li>
+                            </ul>
+                            <p class="plan-meta">需固定時段 ｜ 名額有限，滿了就不再收</p>
+                            <button class="btn add-to-cart" onclick="addToCart('全套托管（一個月）', 800)">加入詢價清單</button>
+                        </div>
+                    </div>
+
+                    <p class="pricing-footnote">
+                        ※ 帳號委託違反官方使用者條款，有被限制的風險，委託前請自行評估。我會全程錄影、不動抽卡與儲值、不改密碼。
+                    </p>
+                </div>
+
+                <!-- 因緣精靈價格（未開放） -->
+                <div class="game-content" data-game="honkai3rd">
+                    <div class="coming-soon-card">
+                        <span class="soon-tag">尚未開放</span>
+                        <h3>《崩壞：因緣精靈》2027 春上市</h3>
+                        <p>
+                            遊戲尚未上市，目前沒有代練服務與定價。<br>
+                            開服後會在這裡公布價格，先追蹤的人第一批優先。
+                        </p>
+                        <div class="soon-actions">
+                            <a class="btn primary" href="https://www.threads.com/share/H-gLDb2UE" target="_blank" rel="noopener noreferrer">先卡位</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 購物車頁面 -->
+        <!-- ================= 作品 / 評價 ================= -->
+        <section id="works" class="works reveal">
+            <div class="container">
+                <h2>作品與評價</h2>
+                <p class="section-sub">每一單都附戰績截圖與錄影，這裡會持續更新。</p>
+
+                <!-- ↓↓↓ 有第一單之後，把下面三張卡換成你的截圖 ↓↓↓ -->
+                <div class="work-grid">
+                    <div class="work-card">
+                        <div class="work-photo placeholder">
+                            <i class="fas fa-image"></i>
+                            <span>戰績截圖</span>
+                        </div>
+                        <h4>三路深淵 滿星</h4>
+                        <p>0 命無專武 ｜ 約 70 分鐘</p>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-photo placeholder">
+                            <i class="fas fa-image"></i>
+                            <span>戰績截圖</span>
+                        </div>
+                        <h4>異相三騎士 滿星</h4>
+                        <p>低配隊 ｜ 約 85 分鐘</p>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-photo placeholder">
+                            <i class="fas fa-image"></i>
+                            <span>買家評價</span>
+                        </div>
+                        <h4>客戶回饋</h4>
+                        <p>「當天就打完，還有錄影，很安心。」</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 常見問題 ================= -->
+        <section id="faq" class="faq reveal">
+            <div class="container">
+                <h2>常見問題</h2>
+
+                <details class="faq-item" open>
+                    <summary>代打會不會被鎖帳號？</summary>
+                    <p>
+                        老實說：<strong>代打違反官方條款，理論上有風險。</strong>
+                        我的做法是把風險降到最低——全程錄影、只用你允許的裝置登入、不動抽卡與儲值、不改密碼、完成後提醒你登出其他裝置。
+                        如果你完全不能接受任何風險，那就不要委託，我不會硬接。
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>要怎麼付款？會不會被騙？</summary>
+                    <p>
+                        先付 30% 訂金，打完確認滿星再付尾款。沒有滿星就不收費。
+                        第一次合作建議先從單次小單（例如王棋 NT$200）開始，你覺得可以再談大單。
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>多久可以打完？</summary>
+                    <p>
+                        單次深淵類通常 <strong>當天</strong> 就能交，最多隔天。
+                        劇情、活動、托管會先跟你講明確時間。我只有空檔能接單，所以下單前我會先確認時段，不會讓你等。
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>我需要提供什麼？</summary>
+                    <p>
+                        角色池截圖（或直接讓我上線看）、你要打的項目、可以的時間。
+                        帳號登入方式我們私下談，我不會要求你給不必要的資料。
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>可以先免費看一下我的帳號能不能滿星嗎？</summary>
+                    <p>
+                        可以，這是免費的。你截角色池給我，我告訴你這期能不能滿、要補什麼。
+                        <strong>不能滿我會直接說，不會硬接。</strong>
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>為什麼價格是這樣？</summary>
+                    <p>
+                        我專做星鐵，熟悉機制跟角色搭配，所以花的時間比一般代打少、成功率也比較穩。
+                        與其用低價接一堆單然後亂打，我選擇少接幾單、每單都打到滿。
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- ================= 詢價清單 ================= -->
         <section id="cart-page" class="cart-page" style="display: none;">
             <div class="container">
-                <h2>購物車</h2>
+                <h2>詢價清單</h2>
                 <div id="cart-items"></div>
                 <div class="cart-total">
-                    <h3>總計：<span id="total-price">¥0</span></h3>
+                    <h3>預估總計：<span id="total-price">NT$ 0</span></h3>
+                    <p class="cart-hint">按下面按鈕會複製清單，貼到私訊給我就能直接下單。</p>
+                    <button class="btn checkout" onclick="copyOrder()">複製清單，私訊下單</button>
+                    <button class="btn clear-cart" onclick="clearCart()">清空</button>
                 </div>
             </div>
         </section>
 
+        <!-- ================= 聯絡 ================= -->
         <section id="contact" class="contact reveal">
             <div class="container">
-                <h2>聯絡我們</h2>
-                <div class="contact-info">
-                    <a class="contact-item" href="https://www.instagram.com/p/DgIWOSGk9b1/?utm_source=ig_web_copy_link&bqrl=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>IG</h3>
-                            <p>https://www.instagram.com/p/DgIWOSGk9b1/</p>
-                        </div>
-                    </a>
-                    <a class="contact-item" href="https://www.threads.com/share/H-gLDb2UE" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Threads</h3>
-                            <p>https://www.threads.com/share/H-gLDb2UE</p>
-                        </div>
-                    </a>
+                <h2>聯絡我</h2>
+                <p class="section-sub">私訊時直接貼「詢價清單」內容，我會回你時段跟能不能接。</p>
 
+                <div class="contact-info">
+                    <a class="contact-item" href="https://www.threads.com/share/H-gLDb2UE" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-threads"></i>
+                        <div>
+                            <h3>Threads（最快回）</h3>
+                            <p>私訊詢價</p>
+                        </div>
+                    </a>
+                    <a class="contact-item" href="https://www.instagram.com/p/DgIWOSGk9b1/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div>
+                            <h3>Instagram</h3>
+                            <p>私訊詢價</p>
+                        </div>
+                    </a>
+                    <a class="contact-item" href="https://www.facebook.com/profile.php?id=61596645464621" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook"></i>
+                        <div>
+                            <h3>Facebook</h3>
+                            <p>粉專私訊</p>
+                        </div>
+                    </a>
+                    <a class="contact-item" href="https://www.youtube.com/@herta.hat83" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-youtube"></i>
+                        <div>
+                            <h3>YouTube</h3>
+                            <p>代打實錄 / 攻略</p>
+                        </div>
+                    </a>
                 </div>
+
+                <p class="contact-note">
+                    <i class="fas fa-lightbulb"></i>
+                    建議再開一個專門接單的 LINE 或 Discord，買家不用加你私人帳號，成交率會更高。
+                </p>
             </div>
         </section>
     </main>
@@ -269,17 +407,17 @@
         <div class="tower-float tower-right" id="tower-right"></div>
     </div>
 
-    <!-- 固定購物車圖標 -->
+    <!-- 固定詢價清單圖標 -->
     <div class="cart-float">
-        <div class="cart-icon" onclick="toggleCart()">
-            <i class="fas fa-shopping-cart"></i>
+        <div class="cart-icon" onclick="toggleCart()" title="詢價清單">
+            <i class="fas fa-clipboard-list"></i>
             <span class="cart-count" id="cart-count-float">0</span>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026.herta.hat83 保留所有權利.</p>
+            <p>&copy; 2026 herta.hat83 保留所有權利.</p>
         </div>
     </footer>
 
