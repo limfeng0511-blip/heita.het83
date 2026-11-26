@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑塔帽子代練</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-container">
+                    <img src="tower-1.gif" alt="小黑塔" class="logo-gif">
+                    <h1 class="main-title">黑塔帽子代練</h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#services">服務項目</a></li>
+                    <li><a href="#pricing">價格表</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero reveal">
+            <div class="container">
+                <h2>黑塔帽子代練</h2>
+                <p>快速、安全、專業的代練服務，讓您輕鬆享受遊戲樂趣</p>
+                <div class="cta-buttons">
+                    <button class="btn primary" onclick="scrollToSection('services')">查看服務</button>
+                    <button class="btn secondary" onclick="scrollToSection('pricing')">查看價格</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services reveal">
+            <div class="container">
+                <h2>服務項目</h2>
+                <p class="coming-soon"></p>
+                
+                <!-- 專區切換 -->
+                <div class="game-tabs">
+                    <button class="tab-btn active" onclick="switchGame('honkai')">星穹鐵道</button>
+                    <button class="tab-btn" onclick="switchGame('honkai3rd')">崩壞：因緣精靈</button>
+                </div>
+                
+                <!-- 星穹鐵道服務 -->
+                <div id="honkai-services" class="game-content active">
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <i class="fas fa-star"></i>
+                            <h3>每日太忙？</h3>
+                            <p>交給我們托管！</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-star"></i>
+                            <h3>懶得練角色？</h3>
+                            <p>交給我們 幫你練滿</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-dungeon"></i>
+                            <h3>深淵打不過？</h3>
+                            <p>痛苦讓我們凹</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 崩壞：因緣精靈服務 -->
+                <div id="honkai3rd-services" class="game-content">
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <i class="fas fa-gamepad"></i>
+                            <h3>日常任務</h3>
+                            <p>幫你完成所有日常</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-gem"></i>
+                            <h3>角色練級</h3>
+                            <p>快速提升角色等級</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-trophy"></i>
+                            <h3>競技場</h3>
+                            <p>衝擊更高排名</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing reveal">
+            <div class="container">
+                <h2>價格表</h2>
+                
+                <!-- 專區切換 -->
+                <div class="game-tabs">
+                    <button class="tab-btn active" onclick="switchGame('honkai')">星穹鐵道</button>
+                    <button class="tab-btn" onclick="switchGame('honkai3rd')">崩壞：因緣精靈</button>
+                </div>
+                
+                <!-- 星穹鐵道價格表 -->
+                <div id="honkai-pricing" class="game-content active">
+                    <div class="price-table">
+                        <div class="price-header">
+                            <div>服務項目</div>
+                            <div>價格（臺幣）</div>
+                            <div>選擇</div>
+                        </div>
+                        <div class="price-row">
+                            <div>托管:每日60石頭+體力</div>
+                            <div>150$一個月</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-托管:每日60石頭+體力', 150)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>托管:每日+體力+每周貨幣/差分</div>
+                            <div>200$一個月</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-托管:每日+體力+每周貨幣/差分', 200)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>托管:每日+體力+每周貨幣/差分+代練</div>
+                            <div>300$一個月</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-托管:每日+體力+每周貨幣/差分+代練', 300)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>托管:每日+體力+貨幣/差分+代練+深淵（盡量凹）</div>
+                            <div>600$一個月</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-托管:每日+體力+貨幣/差分+代練+深淵（盡量凹）', 600)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>凹一期深淵（滿星才結）</div>
+                            <div>150$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-凹一期深淵（滿星才結）', 150)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>異相三騎士（滿星才結）</div>
+                            <div>200$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-異相三騎士（滿星才結）', 200)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>王棋（滿星才結）</div>
+                            <div>100$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-王棋（滿星才結）', 100)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>打滿貨幣/差分 等級</div>
+                            <div>視情況而定</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-打滿貨幣/差分 等級', 1)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>劇情（支綫主綫全部一版本）</div>
+                            <div>100$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-劇情（支綫主綫全部一版本）', 100)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>小活動</div>
+                            <div>50$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-小活動', 50)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>大活動</div>
+                            <div>100$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-大活動', 100)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>寶箱</div>
+                            <div>一個3$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-寶箱', 3)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>地圖隱藏任務和小支綫</div>
+                            <div>每張地圖+20$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-地圖隱藏任務和小支綫', 20)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>10抽(任何方法)</div>
+                            <div>視情況而定</div>
+                            <button class="btn add-to-cart" onclick="addToCart('星穹鐵道-10抽(任何方法)', 1)">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                
+                #<!-- 崩壞：因緣精靈價格表 -->
+                <div id="honkai3rd-pricing" class="game-content">
+                    <div class="price-table">
+                        <div class="price-header">
+                            <div>服務項目</div>
+                            <div>價格（臺幣）</div>
+                            <div>選擇</div>
+                        </div>
+                        <div class="price-row">
+                            <div>日常任務全清</div>
+                            <div>100$一個月</div>
+                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-日常任務全清', 100)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>角色練級（1-90）</div>
+                            <div>150$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-角色練級（1-90）', 150)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>競技場排名</div>
+                            <div>200$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-競技場排名', 200)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>活動關卡全清</div>
+                            <div>150$</div>
+                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-活動關卡全清', 150)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>角色碎片收集</div>
+                            <div>視情況而定</div>
+                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-角色碎片收集', 1)">加入購物車</button>
+                        </div>
+                        <div class="price-row">
+                            <div>裝備強化</div>
+                            <div>視情況而定</div>
+                            <button class="btn add-to-cart" onclick="addToCart('崩壞因緣精靈-裝備強化', 1)">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 購物車頁面 -->
+        <section id="cart-page" class="cart-page" style="display: none;">
+            <div class="container">
+                <h2>購物車</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <h3>總計：<span id="total-price">¥0</span></h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact reveal">
+            <div class="container">
+                <h2>聯絡我們</h2>
+                <div class="contact-info">
+                    <a class="contact-item" href="https://www.instagram.com/p/DgIWOSGk9b1/?utm_source=ig_web_copy_link&bqrl=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>IG</h3>
+                            <p>https://www.instagram.com/p/DgIWOSGk9b1/</p>
+                        </div>
+                    </a>
+                    <a class="contact-item" href="https://www.threads.com/share/H-gLDb2UE" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Threads</h3>
+                            <p>https://www.threads.com/share/H-gLDb2UE</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 浮動黑塔 -->
+    <div class="tower-field">
+        <div class="tower-float tower-left" id="tower-left"></div>
+        <div class="tower-float tower-right" id="tower-right"></div>
+    </div>
+
+    <!-- 固定購物車圖標 -->
+    <div class="cart-float">
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count-float">0</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026.herta.hat83 保留所有權利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
