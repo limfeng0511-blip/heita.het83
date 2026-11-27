@@ -4,7 +4,7 @@
 // https://www.youtube.com/watch?v=AbCdEf12345  →  填 'AbCdEf12345'
 // 留空 = 顯示「剪輯中」卡位畫面
 // ============================================================
-const YT_VIDEO_ID = '';
+const YT_VIDEO_ID = 'MHdoKRQD-60';
 const YT_CHANNEL = 'https://www.youtube.com/@herta.hat83';
 
 // ===== 首頁 YouTube 影片 =====

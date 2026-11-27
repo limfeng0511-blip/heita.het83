@@ -279,6 +279,69 @@ section {
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
 }
 
+/* Hero 社群小圖示 */
+.hero-social {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 26px 0 4px;
+}
+
+.hero-social a {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(26, 5, 51, .7);
+    border: 1px solid rgba(255, 255, 255, .12);
+    color: var(--pink-light);
+    font-size: 1.1rem;
+    transition: transform .25s ease, border-color .25s ease, color .25s ease;
+}
+
+.hero-social a:hover {
+    transform: translateY(-3px);
+    border-color: rgba(244, 114, 182, .7);
+    color: #fff;
+}
+
+/* 近期實績 */
+.proof-strip {
+    margin: -40px 20px 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.proof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+}
+
+.proof-item {
+    background: linear-gradient(135deg, rgba(88, 28, 135, .55), rgba(157, 23, 77, .35));
+    border: 1px solid rgba(244, 114, 182, .3);
+    border-radius: 14px;
+    padding: 18px 16px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.proof-item strong {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--pink-light);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.proof-item span {
+    font-size: .85rem;
+    color: var(--text-dim);
+    opacity: .9;
+}
+
 /* 服務區域 */
 .services {
     padding: 60px 0;
@@ -791,6 +854,23 @@ footer {
         font-size: 2.5rem;
     }
 
+    .hero {
+        padding: 120px 0 80px;
+    }
+
+    .hero-eyebrow {
+        font-size: .9rem;
+        letter-spacing: 1px;
+    }
+
+    .proof-strip {
+        margin: -10px 20px 60px;
+    }
+
+    .proof-item strong {
+        font-size: 1.3rem;
+    }
+
     .price-header,
     .price-row {
         grid-template-columns: 1fr;
@@ -1166,7 +1246,7 @@ footer {
 }
 
 .work-photo {
-    height: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1175,6 +1255,7 @@ footer {
     color: rgba(233, 213, 255, .45);
     font-size: .85rem;
     background: rgba(255, 255, 255, .03);
+    overflow: hidden;
 }
 
 .work-photo i {
@@ -1186,6 +1267,62 @@ footer {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform .4s ease;
+}
+
+.work-card:hover .work-photo img {
+    transform: scale(1.04);
+}
+
+/* 直式／截圖類圖片：完整顯示不裁切 */
+.work-photo.contain img {
+    object-fit: contain;
+    background: #14061f;
+}
+
+.works-link {
+    color: var(--pink-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(244, 114, 182, .35);
+    padding-bottom: 2px;
+    transition: color .25s ease, border-color .25s ease;
+}
+
+.works-link:hover {
+    color: #fff;
+    border-color: rgba(244, 114, 182, .9);
+}
+
+/* 客戶感謝 */
+.testimonial {
+    margin-top: 26px;
+    padding: 30px 26px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(88, 28, 135, .45), rgba(157, 23, 77, .3));
+    border: 1px solid rgba(244, 114, 182, .28);
+    text-align: center;
+}
+
+.testimonial-icon {
+    display: block;
+    color: rgba(244, 114, 182, .55);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.testimonial-text {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.testimonial-from {
+    font-size: .85rem;
+    color: var(--text-dim);
+    opacity: .8;
 }
 
 .work-card h4 {
